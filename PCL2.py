@@ -88,7 +88,7 @@ class Polygon:
 
 class Pentagon(Polygon):
     def __init__(shape):
-        Polygon.__init__(shape, 5)
+        Polygon.__init__(shape, 5) #5 is for the # of sides
 
     def findArea(shape):
         a, b, c, d, e = shape.sides
@@ -96,10 +96,10 @@ class Pentagon(Polygon):
         area = (s*(s-a)*(s-b)*(s-c)*(s-d)*(s-e)) ** 0.5
         print('the area of the pentagon is %0.2f' %area)
 
-p = Pentagon()
-p.SidesCount()
+p = Pentagon() #this creates an object of the subclass
+p.SidesCount() #p.SidesCount and p.WhatSides is access to the superclass attribute and method 
 p.WhatSides()
-p.findArea()
+p.findArea() #calls the subclass method 
 
 
 #METHOD OVERRIDING
